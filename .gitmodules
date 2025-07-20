@@ -1,0 +1,9 @@
+[submodule "submodules/google-api"]
+	path = submodules/google-api
+	url = https://github.com/vvvvvaves/google-api
+[submodule "submodules/openrouter-api"]
+	path = submodules/openrouter-api
+	url = https://github.com/vvvvvaves/openrouter-api
+[submodule "submodules/glassdoor-scraper"]
+	path = submodules/glassdoor-scraper
+	url = https://github.com/vvvvvaves/glassdoor-scraper
