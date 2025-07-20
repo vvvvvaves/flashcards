@@ -1,1 +1,1 @@
-"# flashcards" 
+Prepare for an exam or a job interview by creating a Google Sheet of flashcards
