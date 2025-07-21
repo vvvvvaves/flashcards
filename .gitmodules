@@ -7,3 +7,6 @@
 [submodule "submodules/glassdoor-scraper"]
 	path = submodules/glassdoor-scraper
 	url = https://github.com/vvvvvaves/glassdoor-scraper
+[submodule "submodules/linkedin-api"]
+	path = submodules/linkedin-api
+	url = https://github.com/vvvvvaves/linkedin-api/
