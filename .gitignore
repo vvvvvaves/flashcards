@@ -1,0 +1,11 @@
+job_description.md
+*.json
+*.html
+*.csv
+*.txt
+*.log
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
