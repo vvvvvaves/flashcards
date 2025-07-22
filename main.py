@@ -21,14 +21,15 @@ def main():
     
     scripts = [
         [
+            os.path.join(base_dir, 'submodules', 'glassdoor-scraper', 'reviews.py'),
+            *( ['--hide-window'] if input['glassdoor_reviews']['hide_window'] else [] ),
+            *( ['--proxy', input['glassdoor_reviews']['proxy']] if input['glassdoor_reviews']['proxy'] else [] ),
+            *( ['--url', input['glassdoor_reviews']['url']] if input['glassdoor_reviews']['url'] else [] )
+        ],
+        [
             os.path.join(base_dir, 'submodules', 'glassdoor-scraper', 'interviews.py'),
             *( ['--headless'] if input['glassdoor_interviews']['headless'] else [] ),
             *( ['--url', input['glassdoor_interviews']['url']] if input['glassdoor_interviews']['url'] else [] )
-        ],
-        [
-            os.path.join(base_dir, 'submodules', 'glassdoor-scraper', 'reviews.py'),
-            *( ['--hide-window'] if input['glassdoor_reviews']['hide_window'] else [] ),
-            *( ['--url', input['glassdoor_reviews']['url']] if input['glassdoor_reviews']['url'] else [] )
         ],
         [
             os.path.join(base_dir, 'submodules', 'linkedin-api', 'job_posting.py'),
@@ -39,7 +40,7 @@ def main():
     
     for script in scripts:
         print(f'Running {script[0]}...')
-        result = subprocess.run([sys.executable, *script], capture_output=True, text=True)
+        result = subprocess.run([sys.executable, *script])
         print(result.stdout)
         if result.stderr:
             print(result.stderr, file=sys.stderr)
