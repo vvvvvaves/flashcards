@@ -1,8 +1,7 @@
 job_description.md
-*.json
+input.json
 *.html
 *.csv
-*.txt
 *.log
 *.pyc
 *.pyo

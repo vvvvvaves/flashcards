@@ -1,0 +1,52 @@
+{
+    "type": "json_schema",
+    "json_schema": {
+        "name": "flashcards",
+        "strict": true,
+        "schema": {
+            "type": "object",
+            "properties": {
+                "flashcards": {
+                    "type": "array",
+                    "description": "List of flashcards",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "title": { "type": "string" },
+                            "question": { "type": "string" },
+                            "answer": { "type": "string" },
+                            "priority": { "type": "number" },
+                            "difficulty": { "type": "string" },
+                            "category": { "type": "string", "enum": ["general", "technical", "behavioral", "other"] },
+                            "topic": { "type": "string", "enum": [
+                                "web-int", 
+                                "osint", 
+                                "data-science", 
+                                "cybersecurity", 
+                                "web-scraping", 
+                                "pandas", 
+                                "python", 
+                                "sql", 
+                                "git", 
+                                "docker", 
+                                "kubernetes", 
+                                "terraform", 
+                                "aws", 
+                                "azure", 
+                                "gcp", 
+                                "linux", 
+                                "networking", 
+                                "security", 
+                                "non-technical", 
+                                "other"] }
+                        },
+                        "required": ["title", "question", "answer", "priority", "difficulty", "category", "topic"],
+                        "additionalProperties": false
+                    }
+                }
+            },
+            "required": ["flashcards"],
+            "additionalProperties": false
+        }
+    }
+} 
